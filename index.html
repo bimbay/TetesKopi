@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tetes Kopi - Setiap Tetesnya Punya Cerita</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <img src="img/Logo.png" alt="Logo Tetes Kopi" class="logo-circle" />
+          <span class="logo-text">Tetes Kopi</span>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#tentang" class="nav-link">Tentang</a>
+          <a href="#menu" class="nav-link">Menu</a>
+          <a href="#galeri" class="nav-link">Galeri</a>
+          <a href="#kontak" class="nav-link">Kontak</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            <span class="title-main">Tetes Kopi</span>
+            <span class="title-sub">Ada Cinta Disetiap Tetesnya</span>
+          </h1>
+          <p class="hero-description">
+            Rasakan kehangatan dalam setiap seduhan. Dari petani lokal untuk
+            jiwa yang membutuhkan inspirasi.
+          </p>
+          <div class="hero-buttons">
+            <a href="#menu" class="btn btn-primary">Lihat Menu</a>
+            <a
+              href="https://wa.me/6282123710997"
+              class="btn btn-secondary"
+              target="_blank"
+            >
+              <span>💬</span> Chat Sekarang
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Tentang Kami</span>
+          <h2 class="section-title">Cerita di Balik Setiap Tetes</h2>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <div class="about-story">
+              <h3>Kisah Tetes Kopi</h3>
+              <p>
+                <strong>Tetes Kopi</strong> lahir dari passion mendalam terhadap
+                kopi Indonesia. Kami adalah UMKM lokal yang berkomitmen
+                menghadirkan pengalaman kopi autentik dari petani-petani hebat
+                Nusantara.
+              </p>
+              <p>
+                Setiap biji kopi yang kami pilih memiliki cerita - tentang tanah
+                yang subur, tangan-tangan terampil petani, dan perjalanan
+                panjang hingga sampai di cangkir Anda. Kami percaya bahwa kopi
+                bukan hanya minuman, tapi jembatan yang menghubungkan jiwa
+                dengan jiwa.
+              </p>
+              <div class="stats">
+                <div class="stat-item">
+                  <span class="stat-number">100+</span>
+                  <span class="stat-label">Happy Customers</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">5+</span>
+                  <span class="stat-label">Varian Biji Kopi</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">3</span>
+                  <span class="stat-label">Brewing Methods</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-image">
+            <div class="image-wrapper">
+              <img
+                src="img/tentang.jpg"
+                alt="Tim Tetes Kopi sedang menyeduh kopi"
+              />
+              <div class="image-overlay">
+                <div class="play-button">▶</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Menu Signature</span>
+          <h2 class="section-title">Manual Brew Premium</h2>
+          <p class="section-description">
+            Setiap metode brewing memberikan karakter unik pada kopi. Pilih yang
+            sesuai dengan mood Anda hari ini.
+          </p>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-card" data-aos="fade-up">
+            <div class="menu-image">
+              <img src="img/v60.jpg" alt="V60 Pour Over" />
+              <div class="menu-badge">Best Seller</div>
+            </div>
+            <div class="menu-content">
+              <h3 class="menu-title">V60 Pour Over</h3>
+              <p class="menu-description">
+                Metode manual yang menghasilkan kopi dengan clarity tinggi dan
+                aroma yang kompleks. Perfect untuk single origin.
+              </p>
+              <div class="menu-footer">
+                <span class="menu-price">Rp 25.000</span>
+                <button class="menu-order-btn">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="menu-image">
+              <img src="img/frenchpress.jpg" alt="French Press" />
+            </div>
+            <div class="menu-content">
+              <h3 class="menu-title">French Press</h3>
+              <p class="menu-description">
+                Full immersion brewing yang menghasilkan body kopi yang rich dan
+                bold. Cocok untuk yang suka kopi dengan karakter kuat.
+              </p>
+              <div class="menu-footer">
+                <span class="menu-price">Rp 24.000</span>
+                <button class="menu-order-btn">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="menu-image">
+              <img src="img/aeropress.jpg" alt="Aeropress" />
+              <div class="menu-badge">Recommended</div>
+            </div>
+            <div class="menu-content">
+              <h3 class="menu-title">Aeropress</h3>
+              <p class="menu-description">
+                Kombinasi pressure dan immersion yang menghasilkan kopi clean
+                dengan sweetness natural. Favorite para coffee enthusiast.
+              </p>
+              <div class="menu-footer">
+                <span class="menu-price">Rp 28.000</span>
+                <button class="menu-order-btn">Order Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeri" class="gallery">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Gallery</span>
+          <h2 class="section-title">Moments & Memories</h2>
+          <p class="section-description">
+            Setiap cangkir adalah momen berharga. Lihat keindahan proses dan
+            hasil karya kami.
+          </p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item" data-category="brewing">
+            <img src="img/galeri1.jpg" alt="Proses brewing V60" />
+            <div class="gallery-overlay">
+              <div class="gallery-content">
+                <h4>Brewing Process</h4>
+                <p>Ketelitian dalam setiap tetes</p>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="coffee">
+            <img src="img/galeri2.jpg" alt="Kopi siap saji" />
+            <div class="gallery-overlay">
+              <div class="gallery-content">
+                <h4>Perfect Cup</h4>
+                <p>Hasil akhir yang sempurna</p>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="beans">
+            <img src="img/galeri3.jpg" alt="Biji kopi premium" />
+            <div class="gallery-overlay">
+              <div class="gallery-content">
+                <h4>Premium Beans</h4>
+                <p>Biji pilihan dari petani lokal</p>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="atmosphere">
+            <img src="img/galeri4.jpg" alt="Suasana cafe" />
+            <div class="gallery-overlay">
+              <div class="gallery-content">
+                <h4>Cozy Atmosphere</h4>
+                <p>Tempat yang nyaman untuk bersantai</p>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="latte-art">
+            <img src="img/galeri5.jpg" alt="Latte art" />
+            <div class="gallery-overlay">
+              <div class="gallery-content">
+                <h4>Latte Art</h4>
+                <p>Seni dalam secangkir kopi</p>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="equipment">
+            <img src="img/galeri6.jpg" alt="Peralatan brewing" />
+            <div class="gallery-overlay">
+              <div class="gallery-content">
+                <h4>Professional Equipment</h4>
+                <p>Alat berkualitas untuk hasil terbaik</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="contact">
+      <div class="container">
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="section-header">
+              <span class="section-tag">Let's Connect</span>
+              <h2 class="section-title">Ready to Taste the Story?</h2>
+              <p class="section-description">
+                Punya pertanyaan atau ingin order? Jangan ragu untuk chat dengan
+                kami. Tim Tetes Kopi siap melayani dengan sepenuh hati!
+              </p>
+            </div>
+
+            <div class="contact-features">
+              <div class="feature-item">
+                <div class="feature-icon">🚀</div>
+                <div class="feature-content">
+                  <h4>Fast Response</h4>
+                  <p>Balasan dalam hitungan menit</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">🎯</div>
+                <div class="feature-content">
+                  <h4>Custom Order</h4>
+                  <p>Sesuaikan dengan selera Anda</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">💫</div>
+                <div class="feature-content">
+                  <h4>Quality Guarantee</h4>
+                  <p>Kualitas terjamin atau uang kembali</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-action">
+            <div class="whatsapp-card">
+              <div class="wa-header">
+                <div class="wa-avatar">
+                  <span>☕</span>
+                </div>
+                <div class="wa-info">
+                  <h4>Tetes Kopi</h4>
+                  <span class="wa-status">Online now</span>
+                </div>
+              </div>
+              <div class="wa-preview">
+                <div class="message-bubble">
+                  <p>Halo! Ada yang bisa kami bantu? 😊</p>
+                  <span class="message-time">just now</span>
+                </div>
+              </div>
+              <a
+                href="https://wa.me/6282123710997?text=Halo%20Tetes%20Kopi!%20Saya%20tertarik%20dengan%20menu%20kalian"
+                target="_blank"
+                class="whatsapp-btn"
+              >
+                <span class="wa-icon">💬</span>
+                <span>Chat via WhatsApp</span>
+                <span class="wa-arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <span class="logo-icon">☕</span>
+              <span class="logo-text">Tetes Kopi</span>
+            </div>
+            <p class="footer-tagline">Setiap tetesnya punya cerita</p>
+          </div>
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#menu">Menu</a>
+            <a href="#galeri">Galeri</a>
+            <a href="#kontak">Kontak</a>
+          </div>
+          <div class="footer-social">
+            <a
+              href="https://wa.me/6282123710997"
+              target="_blank"
+              class="social-link"
+            >
+              <span>💬</span>
+            </a>
+            <a href="#" class="social-link">
+              <span>📷</span>
+            </a>
+            <a href="#" class="social-link">
+              <span>📘</span>
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Tetes Kopi. Dibuat dengan ❤️ dan secangkir kopi.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+      <span>↑</span>
+    </button>
+  </body>
+</html>
