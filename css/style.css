@@ -760,6 +760,7 @@ body {
   gap: 8px;
   font-size: 1.5rem;
   font-weight: 700;
+  text-align: center;
 }
 
 .footer-tagline {
@@ -906,7 +907,27 @@ body {
     gap: 1.5rem;
   }
 
+  .footer-brand {
+    text-align: center;
+  }
+
+  .footer-logo {
+    justify-content: center;
+  }
+
   .footer-social {
+    justify-content: center;
+  }
+
+  .footer-presented {
+    text-align: center;
+  }
+
+  .footer-ka {
+    align-items: center;
+  }
+
+  .logo-row {
     justify-content: center;
   }
 }
