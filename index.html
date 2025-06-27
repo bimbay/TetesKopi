@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tetes Kopi - Setiap Tetesnya Punya Cerita</title>
+    <title>Tetes Kopix</title>
+    <link rel="icon" type="image/x-icon" href="img/Logo.png" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,6 +12,11 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
     <script src="js/script.js" defer></script>
   </head>
   <body>
@@ -43,14 +49,14 @@
         <div class="hero-text">
           <h1 class="hero-title">
             <span class="title-main">Tetes Kopi</span>
-            <span class="title-sub">Ada Cinta Disetiap Tetesnya</span>
+            <span class="title-sub">❝Ada Cinta Disetiap Tetesnya❞</span>
           </h1>
           <p class="hero-description">
             Rasakan kehangatan dalam setiap seduhan. Dari petani lokal untuk
             jiwa yang membutuhkan inspirasi.
           </p>
           <div class="hero-buttons">
-            <a href="#menu" class="btn btn-primary">Lihat Menu</a>
+            <a href="#menu" class="btn btn-secondary">Lihat Menu</a>
             <a
               href="https://wa.me/6282123710997"
               class="btn btn-secondary"
@@ -67,7 +73,7 @@
     </section>
 
     <!-- About Section -->
-    <section class="about">
+    <section class="about" id="tentang">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Tentang Kami</span>
@@ -108,13 +114,8 @@
           </div>
           <div class="about-image">
             <div class="image-wrapper">
-              <img
-                src="img/tentang.jpg"
-                alt="Tim Tetes Kopi sedang menyeduh kopi"
-              />
-              <div class="image-overlay">
-                <div class="play-button">▶</div>
-              </div>
+              <img src="img/Kebun.jpg" alt="Kebun Kopi" />
+              <div class="image-overlay"></div>
             </div>
           </div>
         </div>
@@ -135,11 +136,11 @@
         <div class="menu-grid">
           <div class="menu-card" data-aos="fade-up">
             <div class="menu-image">
-              <img src="img/v60.jpg" alt="V60 Pour Over" />
+              <img src="img/V60.jpg" alt="V60 Pour Over" />
               <div class="menu-badge">Best Seller</div>
             </div>
             <div class="menu-content">
-              <h3 class="menu-title">V60 Pour Over</h3>
+              <h3 class="menu-title">V60</h3>
               <p class="menu-description">
                 Metode manual yang menghasilkan kopi dengan clarity tinggi dan
                 aroma yang kompleks. Perfect untuk single origin.
@@ -153,7 +154,7 @@
 
           <div class="menu-card" data-aos="fade-up" data-aos-delay="100">
             <div class="menu-image">
-              <img src="img/frenchpress.jpg" alt="French Press" />
+              <img src="img/FrenchPress.jpg" alt="French Press" />
             </div>
             <div class="menu-content">
               <h3 class="menu-title">French Press</h3>
@@ -170,7 +171,7 @@
 
           <div class="menu-card" data-aos="fade-up" data-aos-delay="200">
             <div class="menu-image">
-              <img src="img/aeropress.jpg" alt="Aeropress" />
+              <img src="img/Aeropress.jpg" alt="Aeropress" />
               <div class="menu-badge">Recommended</div>
             </div>
             <div class="menu-content">
@@ -189,6 +190,90 @@
       </div>
     </section>
 
+    <section id="beans" class="section">
+      <div class="container">
+        <h2 class="section-title">Varian Biji Kopi</h2>
+        <div class="slider-container">
+          <button class="nav-btn prev-btn">&#10094;</button>
+          <div class="slider" id="bean-slider">
+            <div class="bean-card">
+              <h3>Arabika</h3>
+              <div class="bean-text">
+                <p>
+                  - Rasa: Asam yang cerah (acidity tinggi), rasa kompleks dan
+                  lembut
+                </p>
+                <p>
+                  - Aroma: Wangi, floral, buah-buahan, atau manis seperti coklat
+                </p>
+                <p>- Body: Ringan hingga sedang</p>
+                <p>
+                  Catatan: Banyak digemari karena kehalusan dan kedalaman rasa
+                </p>
+              </div>
+            </div>
+            <div class="bean-card">
+              <h3>Robusta</h3>
+              <div class="bean-text">
+                <p>- Rasa: Lebih pahit, kuat, kadang seperti kayu atau tanah</p>
+                <p>
+                  - Aroma: Kurang wangi, terkadang seperti kacang atau coklat
+                  pahit
+                </p>
+                <p>- Body: Lebih berat dan kasar</p>
+                <p>
+                  Catatan: Kandungan kafein tinggi, sering digunakan untuk
+                  espresso blend
+                </p>
+              </div>
+            </div>
+            <div class="bean-card">
+              <h3>Liberika</h3>
+              <div class="bean-text">
+                <p>
+                  - Rasa: Unik, sedikit fruity dan floral, kadang seperti nangka
+                  atau tembakau
+                </p>
+                <p>
+                  - Aroma: Khas dan tajam, ada yang bilang seperti aroma
+                  fermentasi
+                </p>
+                <p>- Body: Berat dan padat</p>
+                <p>Catatan: Tidak umum, tapi disukai karena keunikannya</p>
+              </div>
+            </div>
+            <div class="bean-card">
+              <h3>Excelsa</h3>
+              <div class="bean-text">
+                <p>- Rasa: Asam kuat tapi tetap ringan, fruity dan winey</p>
+                <p>- Aroma: Kompleks dan eksotis, ada sensasi buah kering</p>
+                <p>- Body: Sedang hingga berat</p>
+                <p>
+                  Catatan: Sering digunakan sebagai campuran untuk menambah
+                  kompleksitas rasa
+                </p>
+              </div>
+            </div>
+            <div class="bean-card">
+              <h3>Gayo</h3>
+              <div class="bean-text">
+                <p>
+                  - Rasa: Lembut, sedikit earthy, acidity rendah hingga sedang
+                </p>
+                <p>- Aroma: Herbal, rempah, kadang coklat atau manis</p>
+                <p>- Body: Penuh dan seimbang</p>
+                <p>
+                  Catatan: Salah satu kopi premium Indonesia yang terkenal di
+                  dunia
+                </p>
+              </div>
+            </div>
+          </div>
+          <button class="nav-btn next-btn">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
     <!-- Gallery Section -->
     <section id="galeri" class="gallery">
       <div class="container">
@@ -202,7 +287,7 @@
         </div>
         <div class="gallery-grid">
           <div class="gallery-item" data-category="brewing">
-            <img src="img/galeri1.jpg" alt="Proses brewing V60" />
+            <img src="img/GaleryV60.jpg" alt="Proses brewing V60" />
             <div class="gallery-overlay">
               <div class="gallery-content">
                 <h4>Brewing Process</h4>
@@ -211,7 +296,7 @@
             </div>
           </div>
           <div class="gallery-item" data-category="coffee">
-            <img src="img/galeri2.jpg" alt="Kopi siap saji" />
+            <img src="img/GaleryPerfectCup.jpg" alt="Kopi siap saji" />
             <div class="gallery-overlay">
               <div class="gallery-content">
                 <h4>Perfect Cup</h4>
@@ -220,7 +305,7 @@
             </div>
           </div>
           <div class="gallery-item" data-category="beans">
-            <img src="img/galeri3.jpg" alt="Biji kopi premium" />
+            <img src="img/GaleryPremiumBeans.jpg" alt="Biji kopi premium" />
             <div class="gallery-overlay">
               <div class="gallery-content">
                 <h4>Premium Beans</h4>
@@ -229,7 +314,7 @@
             </div>
           </div>
           <div class="gallery-item" data-category="atmosphere">
-            <img src="img/galeri4.jpg" alt="Suasana cafe" />
+            <img src="img/GaleryCozyAtmosphere.jpg" alt="Suasana cafe" />
             <div class="gallery-overlay">
               <div class="gallery-content">
                 <h4>Cozy Atmosphere</h4>
@@ -238,7 +323,7 @@
             </div>
           </div>
           <div class="gallery-item" data-category="latte-art">
-            <img src="img/galeri5.jpg" alt="Latte art" />
+            <img src="img/GaleryLatteArt.jpg" alt="Latte art" />
             <div class="gallery-overlay">
               <div class="gallery-content">
                 <h4>Latte Art</h4>
@@ -247,7 +332,10 @@
             </div>
           </div>
           <div class="gallery-item" data-category="equipment">
-            <img src="img/galeri6.jpg" alt="Peralatan brewing" />
+            <img
+              src="img/GaleryCoffeeProfessionalEquipment.jpg"
+              alt="Peralatan brewing"
+            />
             <div class="gallery-overlay">
               <div class="gallery-content">
                 <h4>Professional Equipment</h4>
@@ -302,7 +390,7 @@
             <div class="whatsapp-card">
               <div class="wa-header">
                 <div class="wa-avatar">
-                  <span>☕</span>
+                  <span>TK</span>
                 </div>
                 <div class="wa-info">
                   <h4>Tetes Kopi</h4>
@@ -336,41 +424,59 @@
         <div class="footer-content">
           <div class="footer-brand">
             <div class="footer-logo">
-              <span class="logo-icon">☕</span>
+              <img
+                src="img/Logo.png"
+                alt="Logo Tetes Kopi"
+                class="presentedby-logo"
+              />
+            </div>
+            <div class="footer-logo">
               <span class="logo-text">Tetes Kopi</span>
             </div>
-            <p class="footer-tagline">Setiap tetesnya punya cerita</p>
+            <p class="footer-tagline">Ada Cinta Di Setiap Tetesnya</p>
+            <br />
+            <div class="footer-social">
+              <a
+                href="https://wa.me/6282123710997"
+                target="_blank"
+                class="social-link"
+              >
+                <span>💬</span>
+              </a>
+              <a
+                href="https://www.instagram.com/biimabayu/"
+                class="social-link"
+              >
+                <span>📷</span>
+              </a>
+            </div>
           </div>
-          <div class="footer-links">
-            <a href="#home">Home</a>
-            <a href="#tentang">Tentang</a>
-            <a href="#menu">Menu</a>
-            <a href="#galeri">Galeri</a>
-            <a href="#kontak">Kontak</a>
-          </div>
-          <div class="footer-social">
-            <a
-              href="https://wa.me/6282123710997"
-              target="_blank"
-              class="social-link"
-            >
-              <span>💬</span>
-            </a>
-            <a href="#" class="social-link">
-              <span>📷</span>
-            </a>
-            <a href="#" class="social-link">
-              <span>📘</span>
-            </a>
+
+          <div class="footer-presented">
+            <div class="footer-ka">
+              <span class="logo-text">presented by</span>
+              <div class="logo-row">
+                <img
+                  src="img/Logo.png"
+                  alt="Logo Tetes Kopi"
+                  class="presentedby-logo"
+                />
+                <img
+                  src="img/ITSDAY.png"
+                  alt="ITS DAY"
+                  class="presentedby-logo"
+                />
+              </div>
+            </div>
           </div>
         </div>
+
         <div class="footer-bottom">
           <p>&copy; 2025 Tetes Kopi. Dibuat dengan ❤️ dan secangkir kopi.</p>
         </div>
       </div>
     </footer>
 
-    <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop">
       <span>↑</span>
     </button>

@@ -129,9 +129,6 @@ function initAnimations() {
   statNumbers.forEach((stat) => {
     statsObserver.observe(stat);
   });
-
-  // PARALLAX EFFECT REMOVED - Hero section will now stay fixed
-  // The parallax effect was causing the GIF background to move up and overlap with other sections
 }
 
 function animateCounter(element) {
@@ -361,7 +358,6 @@ function debounce(func, wait, immediate) {
 
 // Performance optimized scroll handler
 const optimizedScrollHandler = debounce(function () {
-  // Add any additional scroll-based animations here
   updateScrollProgress();
 }, 10);
 
@@ -372,9 +368,6 @@ function updateScrollProgress() {
     document.documentElement.scrollHeight -
     document.documentElement.clientHeight;
   const scrolled = (winScroll / height) * 100;
-
-  // You can use this for a scroll progress bar if needed
-  // document.getElementById("scrollProgress").style.width = scrolled + "%";
 }
 
 window.addEventListener("scroll", optimizedScrollHandler);
@@ -417,9 +410,7 @@ function handleImageLoading() {
 // Initialize image loading
 handleImageLoading();
 
-// Additional interactive features
 function initInteractiveFeatures() {
-  // Add ripple effect to buttons
   const buttons = document.querySelectorAll(
     ".btn, .menu-order-btn, .whatsapp-btn"
   );
@@ -459,7 +450,6 @@ function initInteractiveFeatures() {
   });
 }
 
-// Add ripple animation CSS
 const style = document.createElement("style");
 style.textContent = `
     @keyframes ripple {
@@ -471,10 +461,8 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Initialize interactive features
 initInteractiveFeatures();
 
-// Contact form submission (if you want to add a contact form later)
 function initContactForm() {
   const contactForm = document.getElementById("contactForm");
 
@@ -498,3 +486,162 @@ function initContactForm() {
 
 // Initialize contact form
 initContactForm();
+
+function initBeanSlider() {
+  const slider = document.getElementById("bean-slider");
+  const nextBtn = document.querySelector(".next-btn");
+  const prevBtn = document.querySelector(".prev-btn");
+
+  if (!slider || !nextBtn || !prevBtn) {
+    console.warn("Bean slider elements not found");
+    return;
+  }
+
+  // Calculate scroll amount based on card width + gap
+  const getScrollAmount = () => {
+    const cardWidth = 280;
+    const gap = 32;
+    return cardWidth + gap;
+  };
+
+  // Update button states based on scroll position
+  const updateButtonStates = () => {
+    const scrollLeft = slider.scrollLeft;
+    const maxScroll = slider.scrollWidth - slider.clientWidth;
+
+    // Disable/enable buttons based on scroll position
+    prevBtn.style.opacity = scrollLeft <= 0 ? "0.5" : "1";
+    prevBtn.style.cursor = scrollLeft <= 0 ? "not-allowed" : "pointer";
+
+    nextBtn.style.opacity = scrollLeft >= maxScroll - 1 ? "0.5" : "1";
+    nextBtn.style.cursor =
+      scrollLeft >= maxScroll - 1 ? "not-allowed" : "pointer";
+  };
+
+  // Instant scroll function (no delay)
+  const instantScroll = (element, target) => {
+    element.scrollLeft = target;
+    updateButtonStates();
+  };
+
+  // Next button functionality
+  nextBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const scrollAmount = getScrollAmount();
+    const currentScroll = slider.scrollLeft;
+    const targetScroll = currentScroll + scrollAmount;
+    const maxScroll = slider.scrollWidth - slider.clientWidth;
+
+    if (currentScroll < maxScroll - 1) {
+      instantScroll(slider, Math.min(targetScroll, maxScroll));
+    }
+  });
+
+  // Previous button functionality
+  prevBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const scrollAmount = getScrollAmount();
+    const currentScroll = slider.scrollLeft;
+    const targetScroll = Math.max(currentScroll - scrollAmount, 0);
+
+    if (currentScroll > 0) {
+      instantScroll(slider, targetScroll);
+    }
+  });
+
+  // Update button states on scroll
+  slider.addEventListener("scroll", updateButtonStates);
+
+  // Initialize button states
+  updateButtonStates();
+
+  // Handle keyboard navigation
+  slider.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      prevBtn.click();
+    } else if (e.key === "ArrowRight") {
+      e.preventDefault();
+      nextBtn.click();
+    }
+  });
+
+  // Touch/swipe support for mobile
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  slider.addEventListener("mousedown", (e) => {
+    isDown = true;
+    slider.style.cursor = "grabbing";
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+
+  slider.addEventListener("mouseleave", () => {
+    isDown = false;
+    slider.style.cursor = "grab";
+  });
+
+  slider.addEventListener("mouseup", () => {
+    isDown = false;
+    slider.style.cursor = "grab";
+    updateButtonStates();
+  });
+
+  slider.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2;
+    slider.scrollLeft = scrollLeft - walk;
+  });
+
+  // Auto-scroll functionality (optional)
+  let autoScrollInterval;
+  const startAutoScroll = () => {
+    autoScrollInterval = setInterval(() => {
+      const maxScroll = slider.scrollWidth - slider.clientWidth;
+      if (slider.scrollLeft >= maxScroll - 1) {
+        // Reset to beginning
+        instantScroll(slider, 0);
+      } else {
+        nextBtn.click();
+      }
+    }, 4000); // Auto scroll every 4 seconds
+  };
+
+  const stopAutoScroll = () => {
+    clearInterval(autoScrollInterval);
+  };
+
+  // Start auto-scroll when not hovering
+  slider.addEventListener("mouseenter", stopAutoScroll);
+  slider.addEventListener("mouseleave", startAutoScroll);
+
+  // Pause auto-scroll when tab is not visible
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      stopAutoScroll();
+    } else {
+      startAutoScroll();
+    }
+  });
+
+  startAutoScroll();
+
+  // Handle window resize
+  window.addEventListener("resize", () => {
+    updateButtonStates();
+  });
+
+  console.log("Bean slider initialized successfully");
+}
+
+document.addEventListener("DOMContentLoaded", initBeanSlider);
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initBeanSlider);
+} else {
+  initBeanSlider();
+}
